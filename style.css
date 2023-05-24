@@ -1,0 +1,121 @@
+body {
+    font: 1em/1.618 Inter, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    padding: 30px;
+
+    color: #224;
+    background: url("new.gif") center /
+        cover no-repeat fixed;
+}
+.card {
+    max-width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 500px;
+    /* height: 300px; */
+    padding: 35px;
+
+    border: 1px solid rgba(255, 255, 255, 0.011);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.162);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.473);
+
+    backdrop-filter: blur(5px);
+}
+.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.borderLine {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.button {
+    display: inline-block;
+    padding: 10px 50px;
+    border: 0 solid;
+    border-radius: 10rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    outline: none;
+    box-shadow: none;
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 83, 167);
+    border-radius: 10rem;
+    z-index: -2;
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ff0389;
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.button:hover {
+    color: #ffffff;
+}
+
+.button:hover:before {
+    width: 100%;
+}
+
+
+input[type=file] {
+    margin: 0 auto;
+    margin: 10px;
+}
+/* file upload button */
+input[type="file"]::file-selector-button {
+    border-radius: 4px;
+    padding: 0 16px;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    margin-right: 16px;
+    transition: background-color 200ms;
+}
+
+/* file upload button hover state */
+input[type="file"]::file-selector-button:hover {
+    background-color: #f3f4f6;
+}
+
+/* file upload button active state */
+input[type="file"]::file-selector-button:active {
+    background-color: #6d6e70;
+}

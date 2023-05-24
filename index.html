@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Encryption and Decryption</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="card">
+    <h1>File Encryption and Decryption</h1>
+    
+    <h2>Encryption</h2>
+    
+    <div class="box">
+      <input type="file" id="fileInput" accept=".txt">
+      <button class="button" onclick="encryptFile()">Encrypt</button>
+    </div>
+    <br>
+    <a id="encryptedFileLink" style="display: none;">Download Encrypted File</a>
+
+    <h2>Decryption</h2>
+    <div class="box">
+      <input type="file" id="encryptedFileInput" accept=".enc">
+      <button class="button" onclick="decryptFile()">Decrypt</button>
+    </div>
+    <br>
+    <a id="decryptedFileLink" style="display: none;">Download Decrypted File</a>
+    
+  </div>
+</body>
+</html>
